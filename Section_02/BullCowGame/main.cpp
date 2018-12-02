@@ -12,12 +12,12 @@ int main() {
 	PrintIntro();
 	
 	string Guess = "";
-	
-	Guess = GetGuess();
-	PrintGuess(Guess);
-
-	Guess = GetGuess();
-	PrintGuess(Guess);
+	constexpr int TURNS = 5;
+	for (int i = 0; i < TURNS; i++)
+	{
+		Guess = GetGuess();
+		PrintGuess(Guess);
+	}
 
 	return 0;
 }
