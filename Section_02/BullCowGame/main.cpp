@@ -2,6 +2,9 @@
 #include <string>
 using namespace std;
 
+int main();
+
+void PlayGame();
 void PrintIntro();
 string GetGuess();
 void PrintGuess(string);
@@ -10,7 +13,14 @@ void PrintGuess(string);
 int main() {
 
 	PrintIntro();
-	
+	PlayGame();
+
+	return 0;
+}
+
+// main game loop
+void PlayGame()
+{
 	string Guess = "";
 	constexpr int TURNS = 5;
 	for (int i = 0; i < TURNS; i++)
@@ -18,8 +28,6 @@ int main() {
 		Guess = GetGuess();
 		PrintGuess(Guess);
 	}
-
-	return 0;
 }
 
 // introduce the game
